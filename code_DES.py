@@ -139,10 +139,9 @@ def des_decrypt_block(ciphertext, key):
     plain_bin = permute(right + left, FP)
     return bin_to_text(plain_bin)
 
-# --- Test ---
-plaintext = input("Enter plaintext (8 characters): ")
-# Ensure the plaintext is exactly 8 characters  
-key = input("Enter key (8 characters): ")     # Exactly 8 characters
+# Input
+plaintext = input("Enter plaintext (8 characters): ") # Ensure the plaintext is exactly 8 characters  
+key = input("Enter key (8 characters): ")    # Exactly 8 characters
 
 print("Plaintext:", plaintext)
 cipher_bin = des_encrypt_block(plaintext, key)
